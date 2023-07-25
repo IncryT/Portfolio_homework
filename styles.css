@@ -1,6 +1,6 @@
 :root {
   --branding-color: #e141bb;
-  --secondary-color: #88d82d;
+  --secondary-color: #c3ec94;
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", sans-serif;
 }
@@ -19,6 +19,7 @@ h3 {
 
 h1 {
   font-size: 96px;
+  line-height: 2;
 }
 
 p {
@@ -92,11 +93,13 @@ btn-branding {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%3;
+    width: 410px;
+    height: 410px;
   }
 }
 .img-fluid {
-  max-width: 600px;
+  max-width: 100%;
+  height: auto;
 }
 .content-container {
   padding: 160px 20px;
@@ -139,4 +142,10 @@ btn-branding {
 }
 .body {
   background-color: white;
+}
+nav li {
+  display: inline;
+  list-style: none;
+  line-height: 42px;
+  margin-left: 15px;
 }
