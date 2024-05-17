@@ -104,14 +104,31 @@ p {
 }
 .content-container {
   padding: 160px 20px;
-}
-.content-container {
   margin: 30px;
+}
+.content {
+  
+  padding-top: 80px;
+}
+#gallery{
+    width: 400px;
+    height: auto;
+    border: 2px solid #000;
+    margin: 10px auto;
+}
+.content img{
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+}
+ img:hover{
+    border: 2px solid white;
 }
 
 .content h1 {
-  font-size: 64px;
+  font-size: 54px;
   line-height: 80px;
+
 }
 .content h2 {
   font-size: 18px;
