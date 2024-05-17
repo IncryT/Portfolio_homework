@@ -68,7 +68,7 @@ p {
   padding: 120px 60px;
 }
 
-@media (max-width: 786px) {
+@media (max-width: 786px) 
   h1 {
     font-size: 44px;
     line-height: 2;
@@ -97,7 +97,7 @@ p {
     width: 410px;
     height: 410px;
   }
-}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
