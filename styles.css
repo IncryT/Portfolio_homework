@@ -1,16 +1,18 @@
-:root { --primary-color: #4567b7; 
-  --secondary-color: #f2f2f2;  
-  --accent-color: #8bc34a;    
-  --heading-font-family: "Montserrat", sans-serif; 
-  --default-font-family: "Lato", sans-serif; }
+:root {
+  --primary-color: #007bff; /* Updated to a vibrant blue */
+  --secondary-color: #f8f9fa; /* Updated to a light gray */
+  --accent-color: #28a745; /* Updated to a modern green */
+  --heading-font-family: "Poppins", sans-serif; /* Updated font */
+  --default-font-family: "Lato", sans-serif; /* Keeping Lato for body text */
+}
 
 body {
   font-family: var(--default-font-family);
-  background: linear-gradient(to right, #8bc34a9e, #bfbbaf, #4567b79a);
+  background: linear-gradient(to right, #28a7459e, #f8f9fa, #007bff9a); /* Updated gradient */
 }
 
 .navbar {
-  background: linear-gradient(to right, #4567b7, #8bc34a, #f3b0c492);
+  background: linear-gradient(to right, #007bff, #28a745, #f3b0c492); /* Updated gradient */
 }
 
 h1,
@@ -26,10 +28,12 @@ h1 {
   font-size: 48px;
   line-height: 1.2;
 }
-.text-center{
-font-size: 48px;
+
+.text-center {
+  font-size: 48px;
 }
-.size{
+
+.size {
   font-size: 20px;
 }
 
@@ -37,7 +41,6 @@ p {
   font-family: var(--default-font-family);
   font-weight: normal;
   text-align: center;
-
 }
 
 .hero {
@@ -68,6 +71,11 @@ p {
   font-size: 18px;
   line-height: 27px;
   padding: 12px 20px;
+  transition: background-color 0.3s ease; /* Added transition */
+}
+
+.btn-branding:hover {
+  background: #218838; /* Darker shade on hover */
 }
 
 .btn-branding-outline {
@@ -78,6 +86,12 @@ p {
   line-height: 27px;
   padding: 15px 30px;
   text-align: center;
+  transition: background-color 0.3s ease; /* Added transition */
+}
+
+.btn-branding-outline:hover {
+  background: var(--accent-color);
+  color: white; /* Change text color on hover */
 }
 
 .project-description {
@@ -94,21 +108,21 @@ p {
     font-size: 24px;
   }
 
- .hero {
+  .hero {
     padding: 80px 20px;
   }
 
- .project-description {
+  .project-description {
     padding: 0;
     text-align: center;
   }
 
- .content-container {
+  .content-container {
     text-align: center;
     padding: 0;
   }
 
- .img {
+  .img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -116,10 +130,11 @@ p {
     height: 300px;
   }
 
- .img-fluid {
+  .img-fluid {
     max-width: 100%;
     height: auto;
   }
+
   .col-md-4 {
     width: 100%;
   }
@@ -209,14 +224,15 @@ img:hover {
 
 /* Button Styling */
 .btn-primary {
-  background-color: #4567b7; /* Your primary color */
+  background-color: #007bff; /* Updated primary color */
   color: white;
   border: none;
 }
 
 .btn-primary:hover {
-  background-color: #304886; /* Darker shade of primary */
+  background-color: #0056b3; /* Darker shade of primary */
 }
+
 h4 {
   font-size: 18px;
 }
