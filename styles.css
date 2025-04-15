@@ -98,6 +98,10 @@ p {
   padding: 80px 60px;
 }
 
+.curly-font {
+  font-family: 'Dancing Script', cursive; /* Apply curly font */
+}
+
 @media (max-width: 786px) {
   h1 {
     font-size: 36px;
