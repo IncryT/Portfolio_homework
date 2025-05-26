@@ -24,10 +24,69 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Navbar styling */
+      .navbar {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background: var(--secondary-color);
+      }
+
+      .navbar-nav .nav-link {
+        color: var(--outer-space);
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+        color: var(--cherry-blossom-pink);
+      }
+
+      /* Fade-in animation */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Contact form styling */
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background: var(--champagne-pink);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      .form-control {
+        border-radius: 8px;
+        border: 1px solid var(--timberwolf);
+        margin-bottom: 15px;
+      }
+
+      .btn-primary {
+        background-color: var(--outer-space);
+        border: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--cherry-blossom-pink);
+        color: var(--outer-space);
+      }
+    </style>
     <title>Contact page</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <body class="body">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">Trudy Garai</a>
         <button
@@ -42,11 +101,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link "  href="index.html"
-                >Home</a
-              >
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
@@ -54,7 +111,6 @@
             <li class="nav-item">
               <a class="nav-link" href="work.html">Work</a>
             </li>
-
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
             </li>
@@ -65,42 +121,56 @@
         </div>
       </div>
     </nav>
-    <div class="container">
-      <div class="row mt-5">
-        <div class="col-md-12">
-          <h1 class="text-muted text-center">Let's get in touch!</h1>
-          <div class="row justify-content-center mt-5">
-            <div class="col-md-6">
-              <h3>Email</h3>
-              <p><a href="mailto:garaitrudy@gmail.com">garaitrudy@gmail.com</a></p>
-              <h3>Instagram</h3>
-              <p>
-                <a href="https://www.instagram.com/trudygarai" target="_blank"
-                  >trudygarai</a
-                >
-              </p>
-              <h3>Tiktok</h3>
-              <p>
-                <a href="https://www.tiktok.com/@untee23" target="_blank"
-                  >@untee23</a
-                >
-              </p>
-            </div>
+    <div class="container mt-5 pt-5 fade-in" style="animation-delay: 0.3s;">
+      <h1 class="text-muted text-center mb-4">Let's get in touch!</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="contact-form">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
+          </div>
+          <div class="mt-5">
+            <h3>Email</h3>
+            <p><a href="mailto:garaitrudy@gmail.com">garaitrudy@gmail.com</a></p>
+            <h3>Instagram</h3>
+            <p>
+              <a href="https://www.instagram.com/trudygarai" target="_blank"
+                >trudygarai</a
+              >
+            </p>
+            <h3>Tiktok</h3>
+            <p>
+              <a href="https://www.tiktok.com/@untee23" target="_blank"
+                >@untee23</a
+              >
+            </p>
           </div>
         </div>
       </div>
     </div>
-
     <footer class="mt-5">
       <div class="social-links d-flex justify-content-center">
-        <a href="https://www.github.com/IncryT" target="_blank">
+        <a href="https://www.github.com/IncryT" target="_blank" aria-label="GitHub">
           <i class="fab fa-github" aria-hidden="true"></i>
         </a>
 
-        <a href="https://www.instragram.com/trudygarai" target="_blank">
+        <a href="https://www.instragram.com/trudygarai" target="_blank" aria-label="Instagram">
           <i class="fab fa-instagram" aria-hidden="true"></i>
         </a>
-        <a href="https://www.tiktok.com/@untee23" target="_blank">
+        <a href="https://www.tiktok.com/@untee23" target="_blank" aria-label="TikTok">
           <i class="fab fa-tiktok"></i>
         </a>
       </div>

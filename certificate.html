@@ -24,10 +24,79 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Navbar styling */
+      .navbar {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background: var(--secondary-color);
+      }
+
+      .navbar-nav .nav-link {
+        color: var(--outer-space);
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+        color: var(--cherry-blossom-pink);
+      }
+
+      /* Fade-in animation */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Certificate card hover effect */
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-title {
+        color: var(--outer-space);
+        font-weight: 700;
+      }
+
+      .card-text {
+        color: var(--outer-space);
+      }
+
+      .btn-primary {
+        background-color: var(--outer-space);
+        border: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--cherry-blossom-pink);
+        color: var(--outer-space);
+      }
+
+      /* Modal styles */
+      .modal-img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
     <title>Certificates</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <body class="body">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">Trudy Garai</a>
         <button
@@ -42,11 +111,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link "  href="index.html"
-                >Home</a
-              >
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
@@ -65,96 +132,29 @@
       </div>
     </nav>
 
-    <div class="container mt-5">
-      <h1 class="text-center mb-4">Certificates</h1>
+    <div class="container mt-5 pt-5">
+      <h1 class="text-center mb-4 fade-in" style="animation-delay: 0.3s;">Certificates</h1>
       <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img
-              src="images/cert1.png" 
-              class="card-img-top"
-              alt="Certificate Image"
-            />
+        <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.5s;">
+          <div class="card" data-bs-toggle="modal" data-bs-target="#modal1">
+            <img src="images/cert1.png" class="card-img-top" alt="SheCodes Basics" />
             <div class="card-body">
               <h5 class="card-title">SheCodes Basics</h5>
               <p class="card-text">
-                This course was a great introduction to HTML, CSS, and JavaScript. I learned how to create  webpages
+                This course was a great introduction to HTML, CSS, and JavaScript. I learned how to create webpages.
               </p>
               <a href="#" class="btn btn-primary">View Certificate</a>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img
-              src="images/cert2.png" 
-              class="card-img-top"
-              alt="Certificate Image"
-            />
+        <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.7s;">
+          <div class="card" data-bs-toggle="modal" data-bs-target="#modal2">
+            <img src="images/cert2.png" class="card-img-top" alt="SheCodes Plus" />
             <div class="card-body">
-              <h5 class="card-title"> SheCodes Plus</h5>
+              <h5 class="card-title">SheCodes Plus</h5>
               <p class="card-text">
-                 now diving into Web development learning how to use Git,Github ,API and hosting on Netlify
-              </p>
-              <a href="#" class="btn btn-primary">View Certificate</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img
-              src="images/cert3.png"
-              class="card-img-top"
-              alt="Certificate Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">SheCodes Responsiveness</h5>
-              <p class="card-text">
-                learnt how to build responsive websites.Introduced to Bootstrap and SEO
-              </p>
-              <a href="#" class="btn btn-primary">View Certificate</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img
-              src="images/cert4.png" 
-              class="card-img-top"
-              alt="Certificate Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">SheCodes React</h5>
-              <p class="card-text">
-              learnt how to use React to from scratch. 
-              </p>
-              <a href="#" class="btn btn-primary">View Certificate</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img
-              src="images/cert5.png" 
-              class="card-img-top"
-              alt="Certificate Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Introduction to Artificial Intelligence</h5>
-              <p class="card-text">
-                just getting to know about Artificial Intelligence
-              </p>
-              <a href="#" class="btn btn-primary">View Certificate</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img
-              src="images/cert6.png" 
-              class="card-img-top"
+                Now diving into Web development learning how to use Git, Github, API and hosting on Netlify.
               alt="Certificate Image"
             />
             <div class="card-body">
