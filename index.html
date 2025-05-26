@@ -26,8 +26,129 @@
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
-</head>
+    <style>
+      /* Typing animation styles */
+      .typing {
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        border-right: 2px solid var(--primary-color);
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+        animation: typing 3s steps(40, end) forwards, blink 0.75s step-end infinite;
+        margin: 0 auto;
+      }
 
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      /* Navbar shadow and hover */
+      .navbar {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background: var(--secondary-color);
+      }
+
+      .navbar-nav .nav-link {
+        color: var(--outer-space);
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+        color: var(--cherry-blossom-pink);
+      }
+
+      /* Fullscreen hero */
+      .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, var(--champagne-pink), var(--cherry-blossom-pink));
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+        color: var(--outer-space);
+      }
+
+      .btn-primary {
+        background-color: var(--outer-space);
+        border: none;
+        padding: 12px 30px;
+        font-size: 1.25rem;
+        border-radius: 30px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--ash-gray);
+        color: var(--outer-space);
+      }
+
+      footer {
+        background: var(--timberwolf);
+        padding: 40px 20px;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      .contact-box {
+        background: var(--champagne-pink);
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+
+      .email-link {
+        color: var(--outer-space);
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-decoration: none;
+      }
+
+      .email-link:hover {
+        color: var(--cherry-blossom-pink);
+      }
+
+      .social-links a {
+        color: var(--outer-space);
+        font-size: 1.5rem;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: var(--cherry-blossom-pink);
+      }
+    </style>
+</head>
+<body>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">Trudy Garai</a>
@@ -43,7 +164,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
@@ -66,40 +187,32 @@
 <div class="hero">
     <p>🤝 Hello, I am</p>
     <h1>Trudy Garai</h1>
-    <h2 class="mb-5">👩‍💻Beginner front-end developer based in Zimbabwe</h2>
+    <h2 class="typing">👩‍💻 Front-end developer based in Zimbabwe</h2>
     <div>
-        <a href="contact.html" class="btn btn-primary">Contact me</a>
+        <a href="contact.html" class="btn btn-primary mt-4">Contact me</a>
     </div>
 </div>
 
-<p class="text-center m-5 size">feel free to look around</p>
-
-<div>
-    <footer>
-        <div class="contact-box justify-content-between mb-5 ">
-            <div>
-                <h4>Work Inquiry</h4>
-                <p class="text-muted">Let's work together</p>
-            </div>
-            <div>
-                <a href="" class="btn btn-branding-outline mt-3"> Contact me </a>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center mb-5">
-            <a href="mailto:garaitrudy@gmail.com" class="email-link">garaitrudy@gmail.com</a>
-        </div>
-        <div class="social-links d-flex justify-content-center">
-            <a href="https://www.github.com/IncryT" target="_blank">
-                <i class="fab fa-github" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.instragram.com/trudygarai" target="_blank">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.tiktok.com/@untee23" target="_blank">
-                <i class="fab fa-tiktok"></i>
-            </a>
-        </div>
-    </footer>
-</div>
+<footer>
+    <div class="contact-box">
+        <h4>Work Inquiry</h4>
+        <p class="text-muted">Let's work together</p>
+        <a href="contact.html" class="btn btn-branding-outline mt-3">Contact me</a>
+    </div>
+    <div>
+        <a href="mailto:garaitrudy@gmail.com" class="email-link">garaitrudy@gmail.com</a>
+    </div>
+    <div class="social-links mt-3">
+        <a href="https://www.github.com/IncryT" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instragram.com/trudygarai" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.tiktok.com/@untee23" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+</footer>
 </body>
 </html>
