@@ -33,12 +33,30 @@ body {
   color: var(--cherry-blossom-pink);
 }
 
-/* Existing styles below */
-
-body {
-  font-family: var(--default-font-family);
-  background: linear-gradient(to right, var(--ash-gray), var(--timberwolf), var(--outer-space));
+/* Social links styling */
+.social-links {
+  display: flex;
+  gap: 25px;
+  font-size: 1.8rem;
+  justify-content: center;
+  padding: 10px 0;
 }
+
+.social-links a {
+  color: var(--outer-space);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--cherry-blossom-pink);
+  transform: scale(1.2);
+}
+
+/* Existing styles below */
 
 .navbar {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
